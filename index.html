@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        body {
+            background-color: rgb(236, 236, 236);
+
+
+        }
+
+        .center {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 500px;
+            height: 300px;
+            border: 1px solid transparent;
+            box-sizing: border-box;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.542);
+            border-radius: 6px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        button {
+            padding: 5px 15px;
+            background-color: rgb(6, 4, 4);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            margin: 0px 1rem;
+            font-size: 22px;
+            font-family: tahoma;
+
+
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        button:active {
+            opacity: 0.4;
+        }
+
+
+
+
+        #counter {
+            font-size: 8rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="center">
+        <div class="box">
+            <label for="" id="counter">0</label>
+            <div class="btns">
+                <button id="incrice">incrice</button>
+                <button id="reset">reset</button>
+                <button id="decrice">decrice</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        let count = 0;
+
+        document.getElementById("incrice").onclick = () => {
+            document.getElementById("counter").textContent = count++;
+        }
+
+
+        document.getElementById("reset").onclick = () => {
+            count = 0;
+            document.getElementById("counter").textContent = count;
+        }
+
+
+
+        document.getElementById("decrice").onclick = () => {
+            document.getElementById("counter").textContent = count--;
+        }
+    </script>
+</body>
+
+</html>
